@@ -30,6 +30,7 @@ gulp.task('scripts', ['lint'], function() {
         .pipe(plugins.concat('scripts.min.js'))
         .pipe(plugins.uglify())
         .pipe(gulp.dest('dist/js'))
+        .pipe(plugins.notify('Scripts have been updated'))
         .pipe(plugins.livereload());
 });
 
