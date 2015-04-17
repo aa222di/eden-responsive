@@ -62,7 +62,7 @@ gulp.task('watch', function() {
 	plugins.livereload.listen();
 
 	gulp.watch('build/js/*.js', ['scripts']);
-	gulp.watch('build/style/src/*.scss', ['styles']);
+	gulp.watch('build/style/src/**/*.scss', ['styles']);
 	gulp.watch('imgraw/*', ['imagemin']);
 });
 

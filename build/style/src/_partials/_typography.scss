@@ -1,13 +1,43 @@
+/* ------------------------ MIXINS ------------------------ */
+/* Calculates font size in rem and px  for browser compatability */
+@mixin font-size($sizeValue) {
+  $remValue: $sizeValue;
+  $pxValue: ($sizeValue * 10);
+  font-size: $pxValue * 1px; 
+  //font-size: $remValue * 1rem;
+}
+
+/* Sets h1 on baseline */
+@mixin position($sizeValue, $lineheight) {
+  //$top: ($lineheight - $sizeValue) / 2;
+  //position: relative;
+  //top: $top;
+}
+
+/* VARIABLES BASED ON THE GOLDEN RATIO */
+$p: $body-font-size / 10;
+$h2: $p * 1.618;
+$h1: $h2 * 1.618;
+$h3: $h2 * (1.618 / 2);
+
+
+
 /* ## Typographical Elements
 --------------------------------------------- */
+html {
+  color: $body-font-color;
+  font-family: $body-font;
+  font-size: 62.5%;   /* Sets up the Base 10 stuff */
+  
+}
+
+
+
 body {
-  background-color: #f5f5f5;
-  color: #333;
-  font-family: Lato, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.625;
-  margin: 0; }
+    @include font-size($p);
+    font-weight: $body-font-weight;
+    line-height: $line-height;
+  }
 
 a,
 button,
@@ -22,31 +52,38 @@ textarea:focus,
   transition: all 0.1s ease-in-out; }
 
 ::-moz-selection {
-  background-color: #333;
-  color: #fff; }
+  background-color: $body-font-color;
+  color: $background-color; }
 
 ::selection {
-  background-color: #333;
-  color: #fff; }
+  background-color: $body-font-color;
+  color: $background-color;
+}
 
 a {
-  color: #e5554e;
+  color: $link-color;
   text-decoration: none; }
 
 a:hover {
-  color: #333; }
+  color: $body-font-color;
+  text-decoration: underline; }
 
 p {
-  margin: 0 0 28px;
-  padding: 0; }
+  margin: 0 0 $line-height;
+ }
 
 ol,
 ul {
-  margin: 0;
+  margin: 0 0 $line-height 0;
   padding: 0; }
 
+ul {
+  list-style: square outside;
+}
+
 li {
-  list-style-type: none; }
+  list-style-type: none; 
+}
 
 b,
 strong {
@@ -59,7 +96,7 @@ i {
   font-style: italic; }
 
 blockquote {
-  margin: 40px; }
+  margin: $line-height; }
 
 blockquote::before {
   content: "\201C";
@@ -78,26 +115,39 @@ h3,
 h4,
 h5,
 h6 {
-  color: #333;
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 0 0 10px; }
+  color: $heading-font-color;
+  font-family: $heading-font;
+ }
+
+h1,h2,h3 {
+  font-weight: $heading-font-weighth13;
+}
+
+h4,h5,h6 {
+  font-weight: $heading-font-weighth46;
+}
+
 
 h1 {
-  font-size: 36px; }
+  @include font-size($h1);
+  line-height: 2* $line-height;
+  @include position($h1, ($line-height*2));
+}
 
 h2 {
-  font-size: 30px; }
+  @include font-size($h2); }
 
 h3 {
-  font-size: 24px; }
+  @include font-size($h3); }
 
 h4 {
-  font-size: 20px; }
+  @include font-size($p); 
+  text-transform: uppercase;
+  font-weight: normal;
+}
 
 h5 {
-  font-size: 18px; }
+  @include font-size($p); }
 
 h6 {
-  font-size: 16px; }
+  @include font-size($p); }

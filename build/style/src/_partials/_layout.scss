@@ -5,11 +5,12 @@
 .site-inner,
 .wrap {
   margin: 0 auto;
-  max-width: 1200px; }
+  max-width: 1200px;
+   @include wrapper();  }
 
 .site-inner {
   clear: both;
-  padding-top: 40px; }
+  padding-top: $line-height; }
 
 /* ## Column Widths and Positions
 --------------------------------------------- */
@@ -17,7 +18,8 @@
 .content-sidebar-sidebar .content-sidebar-wrap,
 .sidebar-content-sidebar .content-sidebar-wrap,
 .sidebar-sidebar-content .content-sidebar-wrap {
-  width: 980px; }
+  width: $contentwidth;
+  @include wrapper(); }
 
 .content-sidebar-sidebar .content-sidebar-wrap {
   float: left; }
@@ -28,8 +30,7 @@
 
 /* ### Content */
 .content {
-  float: right;
-  width: 800px; }
+  @include column(8, right); }
 
 .content-sidebar .content,
 .content-sidebar-sidebar .content,
@@ -38,16 +39,16 @@
 
 .content-sidebar-sidebar .content,
 .sidebar-content-sidebar .content,
-.sidebar-sidebar-content .content {
-  width: 580px; }
+.sidebar-sidebar-content § {
+  @include column(8, right);  }
 
 .full-width-content .content {
   width: 100%; }
 
 /* ### Primary Sidebar */
 .sidebar-primary {
-  float: right;
-  width: 360px; }
+@include column(4, right); 
+   }
 
 .sidebar-content .sidebar-primary,
 .sidebar-sidebar-content .sidebar-primary {
@@ -55,8 +56,8 @@
 
 /* ### Secondary Sidebar */
 .sidebar-secondary {
-  float: left;
-  width: 180px; }
+  @include column(3); 
+   }
 
 .content-sidebar-sidebar .sidebar-secondary {
   float: right; }
@@ -75,33 +76,34 @@
 .two-fourths,
 .two-sixths,
 .two-thirds {
-  float: left;
-  margin-left: 2.564102564102564%; }
+  //float: left;
+  //margin-left: 2.564102564102564%; 
+}
 
 .one-half,
 .three-sixths,
 .two-fourths {
-  width: 48.717948717948715%; }
+ @include column(6);  }
 
 .one-third,
 .two-sixths {
-  width: 31.623931623931625%; }
+  @include column(4);  }
 
 .four-sixths,
 .two-thirds {
-  width: 65.81196581196582%; }
+ @include column(8);  }
 
 .one-fourth {
-  width: 23.076923076923077%; }
+  @include column(3);  }
 
 .three-fourths {
-  width: 74.35897435897436%; }
+  @include column(9);  }
 
 .one-sixth {
-  width: 14.52991452991453%; }
+  @include column(2);  }
 
 .five-sixths {
-  width: 82.90598290598291%; }
+ @include column(10);  }
 
 .first {
   clear: both;

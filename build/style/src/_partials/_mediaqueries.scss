@@ -3,7 +3,7 @@
 @media only screen and (max-width: 1200px) {
   .site-inner,
   .wrap {
-    max-width: 960px; }
+    max-width: $sitewidth}
 
   .content-sidebar-sidebar .content-sidebar-wrap,
   .sidebar-content-sidebar .content-sidebar-wrap,
@@ -50,7 +50,8 @@
     width: 100%; }
 
   .site-header .wrap {
-    padding: 20px 5%; }
+    //padding: 20px 5%; 
+  }
 
   .header-image .title-area {
     background-position: center top; }
@@ -73,7 +74,7 @@
     padding: 20px 16px; }
 
   .site-header .search-form {
-    margin: 16px auto; }
+    margin: $line-height/2 auto; }
 
   .genesis-nav-menu li.right {
     display: none; }
@@ -83,12 +84,13 @@
 @media only screen and (max-width: 800px) {
   body {
     background-color: #fff;
-    font-size: 16px; }
+     }
 
   .site-inner,
   .wrap {
     padding-left: 5%;
-    padding-right: 5%; }
+    padding-right: 5%; 
+  }
 
   .archive-description,
   .author-box,
@@ -118,4 +120,4 @@
     width: 100%; }
 
   .sidebar .widget.enews-widget {
-    padding: 40px; } }
+    padding: $line-height*2; } } 

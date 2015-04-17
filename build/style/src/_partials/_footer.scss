@@ -1,9 +1,9 @@
 /* # Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
-  background-color: #333;
+  background-color: $body-font-color;
   clear: both;
-  padding-top: 40px; }
+  padding-top: $line-height*3; }
 
 .footer-widgets,
 .footer-widgets a {
@@ -22,7 +22,7 @@
   padding-bottom: 10px; }
 
 .footer-widgets .widget {
-  margin-bottom: 40px; }
+  margin-bottom: $line-height*3; }
 
 .footer-widgets p:last-child {
   margin-bottom: 0; }
@@ -30,10 +30,7 @@
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
-  width: 340px; }
-
-.footer-widgets-1 {
-  margin-right: 60px; }
+  @include column(4); }
 
 .footer-widgets-1,
 .footer-widgets-2 {
@@ -45,10 +42,9 @@
 /* # Site Footer
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
-  background-color: #fff;
-  font-size: 16px;
-  line-height: 1;
-  padding: 40px 0;
+  background-color: $footer-color;
+  @include font-size($p);
+  padding: $line-height*3 0;
   text-align: center; }
 
 .site-footer p {

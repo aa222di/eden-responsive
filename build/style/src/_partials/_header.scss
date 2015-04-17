@@ -2,40 +2,38 @@
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
   background-color: #fff;
-  min-height: 160px; }
+  min-height: $line-height*6; }
 
 .site-header .wrap {
-  padding: 40px 0; }
+  padding: $line-height 0; }
 
 /* ## Title Area
 --------------------------------------------- */
 .title-area {
-  float: left;
-  padding: 10px 0;
-  width: 360px; }
+  @include column(4);
+   }
 
 .header-full-width .title-area {
   width: 100%; }
 
 .site-title {
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 1.2; }
+  @include font-size($h1);
+  @include position($h1, ($line-height*2));
+ }
 
 .site-title a,
 .site-title a:hover {
-  color: #333; }
+  color: $heading-font-color; }
 
 .header-image .site-title > a {
   background: url(images/logo.png) no-repeat left;
   float: left;
-  min-height: 60px;
+  min-height: $line-height*3;
   width: 100%; }
 
 .site-description {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5; }
+  @include font-size($h2);
+ }
 
 .site-description,
 .site-title {
@@ -49,7 +47,6 @@
 /* ## Widget Area
 --------------------------------------------- */
 .site-header .widget-area {
-  float: right;
-  text-align: right;
-  width: 800px; }
+  @include column(8);
+   }
 

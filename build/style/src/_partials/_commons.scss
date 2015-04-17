@@ -22,7 +22,7 @@ img {
 
 .gallery-item {
   float: left;
-  margin: 0 0 28px;
+  margin: 0 0 $line-height;
   text-align: center; }
 
 .gallery-columns-2 .gallery-item {
@@ -68,29 +68,29 @@ img {
 
 .alignleft .avatar,
 .author-box .avatar {
-  margin-right: 24px; }
+  margin-right: $line-height; }
 
 .alignright .avatar {
-  margin-left: 24px; }
+  margin-left: $line-height; }
 
 .comment .avatar {
-  margin: 0 16px 24px 0; }
+  margin: 0 $p*10px $line-height 0; }
 
 /* ## Genesis
 --------------------------------------------- */
 .breadcrumb {
-  margin-bottom: 20px; }
+  margin-bottom: $line-height; }
 
 .archive-description,
 .author-box {
   background-color: #fff;
-  font-size: 16px;
-  margin-bottom: 40px;
-  padding: 40px; }
+  @include font-size($p);
+  margin-bottom: $line-height*2;
+  padding: $line-height*2; }
 
 .author-box-title {
-  font-size: 16px;
-  margin-bottom: 4px; }
+  @include font-size($p);
+  margin-bottom: $line-height/6; }
 
 .archive-description p:last-child,
 .author-box p:last-child {
@@ -103,7 +103,7 @@ img {
 
 .site-header .search-form {
   float: right;
-  margin-top: 12px; }
+  margin-top: $line-height; }
 
 .entry-content .search-form,
 .site-header .search-form {
@@ -122,24 +122,30 @@ img {
 /* ## Titles
 --------------------------------------------- */
 .archive-title {
-  font-size: 20px; }
+  //font-size: 20px; 
+}
 
 .entry-title {
-  font-size: 36px; }
+  @include font-size($h1); 
+  @include position($h1, ($line-height*2));
+}
 
 .entry-title a,
 .sidebar .widget-title a {
-  color: #333; }
+  color: $body-font-color; }
 
 .entry-title a:hover {
-  color: #e5554e; }
+  color: $link-color;
+  text-decoration: none; }
 
 .widget-title {
-  font-size: 18px;
-  margin-bottom: 20px; }
+  //font-size: 18px;
+  //margin-bottom: 20px; 
+}
 
 .footer-widgets .widget-title {
-  color: #fff; }
+  //color: #fff; 
+}
 
 /* ## WordPress
 --------------------------------------------- */
@@ -166,24 +172,24 @@ a.alignright {
 img.centered,
 .aligncenter {
   display: block;
-  margin: 0 auto 24px; }
+  margin: 0 auto $line-height; }
 
 img.alignnone,
 .alignnone {
-  margin-bottom: 12px; }
+  margin-bottom: $line-height/2; }
 
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
-  margin: 0 24px 24px 0; }
+  margin: 0 $line-height $line-height 0; }
 
 a.alignright,
 img.alignright,
 .wp-caption.alignright {
-  margin: 0 0 24px 24px; }
+  margin: 0 0 $line-height $line-height; }
 
 .wp-caption-text {
-  font-size: 14px;
+  font-size: smaller;
   font-weight: 700;
   text-align: center; }
 
@@ -198,12 +204,12 @@ img.alignright,
 .widget ol > li {
   list-style-position: inside;
   list-style-type: decimal;
-  padding-left: 20px;
-  text-indent: -20px; }
+  padding-left: $line-height;
+  text-indent: -$line-height; }
 
 .widget li li {
   border: none;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 $line-height*1.5;
   padding: 0; }
 
 .widget_calendar table {
@@ -216,15 +222,16 @@ img.alignright,
 /* ## Featured Content
 --------------------------------------------- */
 .featured-content .entry {
-  border-bottom: 2px solid #f5f5f5;
-  margin-bottom: 20px;
-  padding: 0 0 24px; }
+  border-bottom: 2px solid $menu-border-color;
+  margin-bottom: $line-height;
+  padding: 0 0 $line-height; }
 
 .footer-widgets .entry {
-  border-bottom: 1px dotted #666; }
+  border-bottom: 1px dotted $menu-border-color; }
 
 .featured-content .entry-title {
-  font-size: 20px; }
+  //font-size: 20px;
+   }
 
 /* # Plugins
 ---------------------------------------------------------------------------------------------------- */

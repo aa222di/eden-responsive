@@ -1,3 +1,27 @@
 @import 'variables';
+@import 'grid';
 @import 'genesis';
 
+// Debugging purpose
+
+
+@mixin debug {
+body {
+	background-image: url('../../images/grid.png');
+	background-repeat: repeat-y;
+	background-size: 100% ($line-height);
+	background-position: 0 -2px;
+}
+
+html {
+	background-color: #fafafa;
+}
+
+.content .entry, .site-header {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+}
+
+//@include debug;

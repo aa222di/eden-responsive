@@ -1,0 +1,60 @@
+/* ------------------------ TABLE OF CONTENTS ------------------------ */
+/*
+
+- Typography
+- Grid Values
+- Sticky Footer Value
+- Colors
+
+
+*/
+
+
+/* ------------------------ TYPOGRAPHY ------------------------ */
+/* Here is where you set your font-families and your body font-size. The rest of the typography adjusts itself to this value based on the Golden Ratio.
+This generates a base which is seated on the same baseline. In case you wan't to change individual H1-H6 etc. You have to do that in typography.less or
+better yet - override the styles in another document. */
+
+/* Font families */
+$body-font: Lato, avenir, 'avenir next', helvetica, arial, sans-serif;
+$heading-font: Lato, Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
+
+/* Font sizes */
+$body-font-size: 16;
+$line-height: ($body-font-size * 1.618px) / 1; 
+
+
+/* Font colors */
+$body-font-color:			#333;
+$heading-font-color:		#333;
+
+/* Font weight */
+$body-font-weight:			100;
+$heading-font-weighth13:	normal;
+$heading-font-weighth46:	normal;
+
+/* Links */
+$link-color: #ee8c39;
+
+/* ------------------------ GRID VALUES ------------------------ */
+$sitewidth: 100%;
+$contentwidth: $sitewidth*0.7;
+$columns: 12;
+$gutter: $line-height;
+
+
+
+// Footer width, see structure.less when used together with sticky footer (should be a lineheight * X)
+$footerheight: $line-height * 4;
+
+/* ------------------------ COLORS ------------------------ */
+$background-color: #fafafa;
+$menu-color: #333;
+$menu-font-color: #fff;
+$menu-border-color: #BEC4A2; // Greenish
+$section-color: #ECECEB; // Light grey yellowish
+$article-background-color: #fff;
+$footer-color: #fff;
+
+/* Media queries */
+

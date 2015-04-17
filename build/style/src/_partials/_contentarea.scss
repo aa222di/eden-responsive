@@ -3,16 +3,16 @@
 /* ## Entries
 --------------------------------------------- */
 .entry {
-  margin-bottom: 40px;
-  padding: 50px 60px; }
+  margin-bottom: $line-height*2;
+  padding: $line-height; }
 
 .content .entry {
-  background-color: #fff; }
+  background-color: $article-background-color; }
 
 .entry-content ol,
 .entry-content ul {
-  margin-bottom: 28px;
-  margin-left: 40px; }
+  margin-bottom: $line-height;
+  margin-left: $line-height; }
 
 .entry-content ol > li {
   list-style-type: decimal; }
@@ -31,15 +31,15 @@
 /* ## Entry Meta
 --------------------------------------------- */
 p.entry-meta {
-  font-size: 16px;
+  @include font-size($p);
   margin-bottom: 0; }
 
 .entry-header .entry-meta {
-  margin-bottom: 24px; }
+  margin-bottom: $line-height; }
 
 .entry-footer .entry-meta {
-  border-top: 2px solid #f5f5f5;
-  padding-top: 24px; }
+  border-top: 2px solid $menu-border-color;
+  padding-top: $line-height; }
 
 .entry-categories,
 .entry-tags {
@@ -47,13 +47,14 @@ p.entry-meta {
 
 .entry-comments-link::before {
   content: "\2014";
-  margin: 0 6px 0 2px; }
+  margin: 0 6px 0 2px; 
+}
 
 /* ## Pagination
 --------------------------------------------- */
 .pagination {
   clear: both;
-  margin: 40px 0; }
+  margin: $line-height 0; }
 
 .adjacent-entry-pagination {
   margin-bottom: 0; }
@@ -62,12 +63,12 @@ p.entry-meta {
   display: inline; }
 
 .archive-pagination li a {
-  background-color: #333;
-  color: #fff;
+  background-color: $body-font-color;
+  color: $article-background-color;
   cursor: pointer;
   display: inline-block;
-  font-size: 16px;
-  padding: 8px 12px; }
+  @include font-size($p);
+  padding: $line-height/3 $line-height/2; }
 
 .archive-pagination li a:hover,
 .archive-pagination .active a {
@@ -79,17 +80,17 @@ p.entry-meta {
 .entry-comments,
 .entry-pings {
   background-color: #fff;
-  margin-bottom: 40px; }
+  margin-bottom: $line-height; }
 
 .comment-respond,
 .entry-pings {
-  padding: 40px 40px 16px; }
+  padding: $line-height $line-height $line-height/2; }
 
 .entry-comments {
-  padding: 40px; }
+  padding: $line-height; }
 
 .comment-header {
-  font-size: 16px; }
+  @include font-size($p);}
 
 li.comment {
   background-color: #f5f5f5;
@@ -100,11 +101,11 @@ li.comment {
   clear: both; }
 
 .comment-list li {
-  margin-top: 24px;
-  padding: 32px; }
+  margin-top: $line-height;
+  padding: $line-height; }
 
 .comment-list li li {
-  margin-right: -32px; }
+  margin-right: $line-height; }
 
 .comment-respond input[type="email"],
 .comment-respond input[type="text"],
@@ -123,6 +124,6 @@ li.comment {
 
 .form-allowed-tags {
   background-color: #f5f5f5;
-  font-size: 16px;
-  padding: 24px; }
+  @include font-size($p);
+  padding: $line-height; }
 
