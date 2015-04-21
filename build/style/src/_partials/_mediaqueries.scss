@@ -3,35 +3,15 @@
 @media only screen and (max-width: 1200px) {
   .site-inner,
   .wrap {
-    max-width: $sitewidth}
+    max-width: 90%}
 
-  .content-sidebar-sidebar .content-sidebar-wrap,
-  .sidebar-content-sidebar .content-sidebar-wrap,
-  .sidebar-sidebar-content .content-sidebar-wrap {
-    width: 740px; }
-
-  .content,
-  .site-header .widget-area {
-    width: 620px; }
-
-  .sidebar-content-sidebar .content,
-  .sidebar-sidebar-content .content,
-  .content-sidebar-sidebar .content {
-    width: 400px; }
-
-  .footer-widgets-1,
-  .footer-widgets-2,
-  .footer-widgets-3,
-  .sidebar-primary,
-  .title-area {
-    width: 300px; }
 
   .footer-widgets-1 {
-    margin-right: 30px; } }
+    margin-right: $line-height; } }
 @media only screen and (max-width: 960px) {
   .site-inner,
   .wrap {
-    max-width: 800px; }
+    max-width: $sitewidth; }
 
   .content,
   .content-sidebar-sidebar .content,
@@ -50,7 +30,7 @@
     width: 100%; }
 
   .site-header .wrap {
-    //padding: 20px 5%; 
+    padding: $line-height/2; 
   }
 
   .header-image .title-area {
@@ -71,7 +51,7 @@
   .genesis-nav-menu a,
   .genesis-nav-menu > .first > a,
   .genesis-nav-menu > .last > a {
-    padding: 20px 16px; }
+    padding: $line-height; }
 
   .site-header .search-form {
     margin: $line-height/2 auto; }
@@ -81,6 +61,8 @@
 
   .footer-widgets-1 {
     margin-right: 0; } }
+
+
 @media only screen and (max-width: 800px) {
   body {
     background-color: #fff;
@@ -121,3 +103,37 @@
 
   .sidebar .widget.enews-widget {
     padding: $line-height*2; } } 
+
+    @media only screen and (max-width: 650px) {
+      .genesis-nav-menu  {
+
+        position: relative;
+        top: 3*$line-height;
+        z-index: 9;
+
+        li {
+          display: block;
+          width: 100%;
+          text-align: center;
+          background-color: lighten($menu-color, 10);
+          position: relative;
+
+          a {
+            text-align: center;
+          }
+        }
+      }
+
+      .nav-primary {
+        height: 3*$line-height;
+        background-image: url("../../images/menu.svg");
+        background-size: 8%; 
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+
+        .wrap {
+          padding: 0;
+        }
+      }
+ } 

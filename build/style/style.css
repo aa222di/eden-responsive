@@ -1440,35 +1440,14 @@ li.comment {
 @media only screen and (max-width: 1200px) {
   .site-inner,
   .wrap {
-    max-width: 100%; }
-
-  .content-sidebar-sidebar .content-sidebar-wrap,
-  .sidebar-content-sidebar .content-sidebar-wrap,
-  .sidebar-sidebar-content .content-sidebar-wrap {
-    width: 740px; }
-
-  .content,
-  .site-header .widget-area {
-    width: 620px; }
-
-  .sidebar-content-sidebar .content,
-  .sidebar-sidebar-content .content,
-  .content-sidebar-sidebar .content {
-    width: 400px; }
-
-  .footer-widgets-1,
-  .footer-widgets-2,
-  .footer-widgets-3,
-  .sidebar-primary,
-  .title-area {
-    width: 300px; }
+    max-width: 90%; }
 
   .footer-widgets-1 {
-    margin-right: 30px; } }
+    margin-right: 25.888px; } }
 @media only screen and (max-width: 960px) {
   .site-inner,
   .wrap {
-    max-width: 800px; }
+    max-width: 100%; }
 
   .content,
   .content-sidebar-sidebar .content,
@@ -1485,6 +1464,9 @@ li.comment {
   .site-header .widget-area,
   .title-area {
     width: 100%; }
+
+  .site-header .wrap {
+    padding: 12.944px; }
 
   .header-image .title-area {
     background-position: center top; }
@@ -1504,7 +1486,7 @@ li.comment {
   .genesis-nav-menu a,
   .genesis-nav-menu > .first > a,
   .genesis-nav-menu > .last > a {
-    padding: 20px 16px; }
+    padding: 25.888px; }
 
   .site-header .search-form {
     margin: 12.944px auto; }
@@ -1552,3 +1534,26 @@ li.comment {
 
   .sidebar .widget.enews-widget {
     padding: 51.776px; } }
+@media only screen and (max-width: 650px) {
+  .genesis-nav-menu {
+    position: relative;
+    top: 77.664px;
+    z-index: 9; }
+    .genesis-nav-menu li {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: #4d4d4d;
+      position: relative; }
+      .genesis-nav-menu li a {
+        text-align: center; }
+
+  .nav-primary {
+    height: 77.664px;
+    background-image: url("../../images/menu.svg");
+    background-size: 8%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer; }
+    .nav-primary .wrap {
+      padding: 0; } }

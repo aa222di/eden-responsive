@@ -9,6 +9,9 @@ define( 'CHILD_THEME_VERSION', '2.1.2' );
 
 add_action('after_setup_theme', 'eden_theme_setup', 9 );
 
+//* EDEN BASIC *//
+define( 'EDEN_PATH', get_stylesheet_directory_uri() );
+
 //* Enqueue Google Fonts
 add_action( 'wp_enqueue_scripts', 'genesis_sample_google_fonts' );
 function genesis_sample_google_fonts() {
@@ -32,6 +35,7 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 function eden_theme_setup() {
 	// Enqueue Livereload
 	add_action( 'wp_enqueue_scripts', 'eden_livereload' );
+	add_action( 'wp_enqueue_scripts', 'eden_scripts' );
 }
 
 function eden_livereload() {
@@ -39,4 +43,12 @@ function eden_livereload() {
 	  wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
 	  wp_enqueue_script('livereload');
 	}
+}
+
+function eden_scripts() {
+	wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', "http" . ( $_SERVER['SERVER_PORT'] == 443 ? "s" : "" ) . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js",  array(), false, true );
+    wp_enqueue_script( 'jquery' );
+	wp_register_script('scripts',  EDEN_PATH . '/dist/js/scripts.min.js', null, false, true);
+	wp_enqueue_script('scripts');	
 }
